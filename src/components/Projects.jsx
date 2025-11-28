@@ -17,7 +17,7 @@ export default function Projects() {
   const projects = [
    { img: img18, title: "Prisma Watches Clone", link: "https://github.com/thasnimpk/prisma_clone.git" },
        { img: img19, title: "CRUD dress",  link: "https://github.com/thasnimpk/crudapp.git" },
-       { img: img22, title: "Portfolio",  link: "https://github.com/thasnimpk" },
+       { img: img22, title: "Portfolio",  link: "https://github.com/thasnimpk/portfolio.git" },
        { img: img21, title: "CRUD",  link: "https://github.com/thasnimpk/CRUD.git" },
        { img: img20, title: "Temple Run Clone", link: "https://github.com/thasnimpk/-imangistudio-templerun-clone.git" },
        { img: img23, title: "Acer laptops clone",  link: "https://github.com/thasnimpk/-acer-laptop-.git" },
