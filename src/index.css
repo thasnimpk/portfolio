@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Humane";
+  src: url("./assets/fonts/Humane-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Humane";
+  src: url("./assets/fonts/Humane-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.title {
+  font-family: "Humane", sans-serif;
+  font-weight: bold;
+}
