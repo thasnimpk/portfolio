@@ -26,6 +26,8 @@ import img23 from "../../src/assets/Screenshot 2025-11-24 100820.png";
 import img24 from "../../src/assets/Screenshot 2025-11-24 105403.png";
 import img25 from "../../src/assets/Screenshot 2025-11-24 161233.png";
 import img26 from "../../src/assets/Screenshot 2025-11-28 143431.png";
+import img27 from "../../src/assets/new.png";
+import img28 from "../../src/assets/nw1.png";
 
 import { Link } from "react-router-dom";
 import Header from "./Header";
@@ -33,18 +35,70 @@ import Header from "./Header";
 export default function Home() {
   const [showMore, setShowMore] = React.useState(false);
 
-  const projectData = [
-    { img: img18, title: "Prisma Watches Clone", link: "https://github.com/thasnimpk/prisma_clone.git" },
-           { img: img19, title: "CRUD dress",  link: "https://github.com/thasnimpk/crudapp.git" },
-           { img: img22, title: "Portfolio",  link: "https://github.com/thasnimpk/portfolio.git" },
-           { img: img21, title: "CRUD",  link: "https://github.com/thasnimpk/CRUD.git" },
-           { img: img20, title: "Temple Run Clone", link: "https://github.com/thasnimpk/-imangistudio-templerun-clone.git" },
-           { img: img23, title: "Acer laptops clone",  link: "https://github.com/thasnimpk/-acer-laptop-.git" },
-           { img: img24, title: "facebook login page",  link: "https://github.com/thasnimpk/FACEBOOK-LOGIN.git" },
-           { img: img25, title: "clash of clans clone",  link: "https://github.com/thasnimpk/clashofclans.git" },
-           { img: img26, title: "Todos",  link: "https://github.com/thasnimpk/TODO.git" },
-  ];
+ const projectData = [
+  {
+    img: img27,
+    title: "DISTRICT chatroom",
+    link: "https://github.com/amaannii/district-frontend.git",
+    live: "https://district-frontend.onrender.com"
+  },
+  {
+    img: img28,
+    title: "Profilo resume builder",
+    link: "https://github.com/thasnimpk/resume-builder-profilo.git",
+    live: "https://resume-builder-profilo.onrender.com"
+  },
 
+  {
+    img: img18,
+    title: "Prisma Watches Clone",
+    link: "https://github.com/thasnimpk/prisma_clone.git",
+    live: "https://prisma-clone-sw3a.onrender.com"
+  },
+  {
+    img: img19,
+    title: "CRUD dress",
+    link: "https://github.com/thasnimpk/crudapp.git",
+    live: "https://crudapp-vhnr.onrender.com"
+  },
+  {
+    img: img22,
+    title: "Portfolio",
+    link: "https://github.com/thasnimpk/portfolio.git",
+    live: "https://portfolio-p8ef.onrender.com/"
+  },
+
+  {
+    img: img21,
+    title: "CRUD",
+    link: "https://github.com/thasnimpk/CRUD.git"
+  },
+  {
+    img: img20,
+    title: "Temple Run Clone",
+    link: "https://github.com/thasnimpk/-imangistudio-templerun-clone.git"
+  },
+  {
+    img: img23,
+    title: "Acer laptops clone",
+    link: "https://github.com/thasnimpk/-acer-laptop-.git"
+  },
+  {
+    img: img24,
+    title: "facebook login page",
+    link: "https://github.com/thasnimpk/FACEBOOK-LOGIN.git"
+  },
+  {
+    img: img25,
+    title: "clash of clans clone",
+    link: "https://github.com/thasnimpk/clashofclans.git"
+  },
+  {
+    img: img26,
+    title: "Todos",
+    link: "https://github.com/thasnimpk/TODO.git"
+  },
+];
   return (
     <>
       <Header />
@@ -129,17 +183,37 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mt-8">
           {(showMore ? projectData : projectData.slice(0, 4)).map((project, index) => (
-            <a
-              key={index}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-900 rounded-2xl overflow-hidden p-4 block hover:scale-105 transition"
-            >
-              <img src={project.img} className="rounded-lg" alt="Project" />
-              <h5 className="text-white mt-3">{project.title}</h5>
-              <p className="text-yellow-300 text-sm">{project.stack}</p>
-            </a>
+            <div
+  key={index}
+  className="bg-gray-900 rounded-2xl overflow-hidden p-4 hover:scale-105 transition"
+>
+  <img src={project.img} className="rounded-lg" alt="Project" />
+
+  <h5 className="text-white mt-3">{project.title}</h5>
+
+  {/* BUTTONS */}
+  <div className="flex gap-2 mt-2">
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-xs bg-gray-800 px-2 py-1 rounded text-white hover:bg-gray-700"
+    >
+      💻 GitHub
+    </a>
+
+    {project.live && (
+      <a
+        href={project.live}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-xs bg-green-600 px-2 py-1 rounded text-white hover:bg-green-500"
+      >
+        🚀 Live
+      </a>
+    )}
+  </div>
+</div>
           ))}
         </div>
 
